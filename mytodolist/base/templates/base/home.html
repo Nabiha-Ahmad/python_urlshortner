@@ -1,0 +1,28 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+ {% block content %}
+
+ <div class="container text-center --bs-primary-border-subtle">
+    <div class="row">
+        
+        <!-- <div class="col-md-auto">
+            Variable width content
+          </div> -->
+        <div class="col">
+            {% for task in tasks %}
+            <div class="container-xl">
+                <h6>{{task.name}}</h6>
+                <p><small>{{task.description}}</small></p>
+            </div>
+            {% endfor %}
+        </div>
+        
+    
+      </div>
+    
+
+  </div>
+
+{% endblock content %}
